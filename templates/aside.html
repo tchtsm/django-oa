@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="layui-side layui-bg-black">
+	<div class="layui-side-scroll">
+		<ul class="layui-nav layui-nav-tree"  lay-filter="test">
+			<li class="layui-nav-item"><a href="{% url 'document' %}">文档管理</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">人员管理</a>
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;">人员</a></dd>
+					<dd><a href="javascript:;">部门</a></dd>
+					<dd><a href="javascript:;">角色</a></dd>
+					<dd><a href="">超链接</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item"><a href="">消息列表</a></li>
+			<li class="layui-nav-item"><a href="">发布商品</a></li>
+		</ul>
+	</div>
+</div>

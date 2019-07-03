@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def list(request):
-    return render(request, 'member/list.html')
+    return render(request, 'document/list.html')
 
 def form(request):
     if request.GET:
