@@ -24,3 +24,5 @@ def store(request):
 def search(request):
     pass
 
+def pdf(request):
+    return render(request, 'document/pdf.html')

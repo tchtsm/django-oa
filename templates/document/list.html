@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
 <table class="layui-table">
 	<colgroup>
 		<col width="30%">
@@ -14,7 +13,7 @@
 	<thead>
 		<tr>
 			<th>名称</th>
-			<th>分类</th>
+			<th>部门</th>
 			<th>提交人</th>
 			<th>提交时间</th>
 			<th>操作</th>
@@ -22,13 +21,39 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>贤心</td>
+			<td><p style="color:#01AAED;cursor:pointer" data-url="/static/document/1.pdf" class="preview">贤心</p></td>
 			<td>汉族</td>
 			<td>1989-10-14</td>
 			<td>人生似修行</td>
-			<td>修改</td>
+			<td>
+				<a href="http://www.layui.com" class="layui-btn layui-btn-xs layui-btn-normal">修改</a>
+			</td>
 		</tr>
 	</tbody>
 </table>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+layui.use(['layer'], function () {
+	layer = layui.layer;
+	$ = layui.$; 
+
+	$('.preview').click(function () {
+		var url = $(this).attr('data-url');
+		var title = $(this).html();
+
+		var index = layer.open({
+			type: 2,
+			anim: 5,
+			title: title,
+			area: ['60vw', '80vh'],
+			content: ['{% url "document-pdf" %}', 'no']
+		});
+	}); 
+});
+</script>
 
 {% endblock %}

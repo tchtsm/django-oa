@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends '../layout.html' %}
 
-</body>
-</html>
+{% block content %}
+
+<table class="layui-table">
+	<colgroup>
+		<col width="30%">
+		<col width="20%">
+		<col width="20%">
+		<col width="20%">
+		<col>
+	</colgroup>
+	<thead>
+		<tr>
+			<th>名称</th>
+			<th>部门</th>
+			<th>提交人</th>
+			<th>提交时间</th>
+			<th>操作</th>
+		</tr> 
+	</thead>
+	<tbody>
+		<tr>
+			<td><p style="color:#01AAED;cursor:pointer" data-url="/static/document/1.pdf" class="preview">贤心</p></td>
+			<td>汉族</td>
+			<td>1989-10-14</td>
+			<td>人生似修行</td>
+			<td>
+				<a href="http://www.layui.com" class="layui-btn layui-btn-xs layui-btn-normal">修改</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+{% endblock %}
